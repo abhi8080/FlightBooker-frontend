@@ -68,7 +68,9 @@ jobs:
         working-directory: ./frontend
 
       - name: Run Playwright tests
-        run: npx playwright test --project=${{ matrix.project.name }} --reporter=@playwright/test-github-reporter
+        run: npx playwright test --project=${{ matrix.project.name }} --verbose
+        env:
+          DEBUG: pw:browser*
         working-directory: ./frontend
 
       - uses: actions/upload-artifact@v3
