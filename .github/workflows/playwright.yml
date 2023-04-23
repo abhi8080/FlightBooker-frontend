@@ -68,7 +68,7 @@ jobs:
         working-directory: ./frontend
 
       - name: Run Playwright tests
-        run: npx playwright test --project=${{ matrix.project.name }} --verbose
+        run: npx playwright test --project=${{ matrix.project.name }}
         env:
           DEBUG: pw:browser*
         working-directory: ./frontend
