@@ -42,7 +42,7 @@ jobs:
         working-directory: ./backend
 
       - name: Start Backend
-        run: dotnet run
+        run: dotnet run &
         working-directory: ./backend
         timeout-minutes: 1
 
