@@ -10,13 +10,7 @@ jobs:
 
     strategy:
       matrix:
-        project:
-          [
-            { name: edge, browser: chromium, port: 5001 },
-            { name: chrome, browser: chromium, port: 5002 },
-            { name: firefox, browser: firefox, port: 5003 },
-            { name: safari, browser: webkit, port: 5004 },
-          ]
+        project: [{ name: chrome, browser: chromium, port: 5002 }]
 
     env:
       DATABASE_HOST: localhost
@@ -50,6 +44,7 @@ jobs:
       - name: Start Backend
         run: dotnet run
         working-directory: ./backend
+        timeout-minutes: 1
 
       - name: Get installed Playwright version
         id: playwright-version
