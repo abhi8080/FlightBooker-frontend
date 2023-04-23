@@ -79,7 +79,7 @@
 <script>
 import axios from "axios";
 
-import FlightBox from "../components/FlightBox.Vue";
+import FlightBox from "../components/FlightBox";
 
 export default {
   name: "Home",
