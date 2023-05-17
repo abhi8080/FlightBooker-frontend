@@ -6,9 +6,7 @@ test.beforeEach(async ({ page }) => {
 
 test.afterEach(async () => {});
 
-test("it can create an account successfully and display a confirmation message if all fields are entered", async ({
-  page,
-}) => {
+test("A flight is available when searching", async ({ page }) => {
   await page
     .getByRole("combobox", { name: "Departure Airport" })
     .selectOption("1");
