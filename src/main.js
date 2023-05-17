@@ -8,6 +8,6 @@ import "bootswatch/dist/superhero/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.min.js";
 import "bootstrap-icons/font/bootstrap-icons.css";
 
-axios.defaults.baseURL = "http://localhost:5000";
+axios.defaults.baseURL = "http://localhost:5228";
 
 createApp(App).use(store).use(router, axios).mount("#app");
