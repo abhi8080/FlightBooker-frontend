@@ -56,6 +56,13 @@ jobs:
         run: dotnet new tool-manifest && dotnet tool install dotnet-ef && dotnet ef database update
         working-directory: ./backend
 
+      - name: Insert Data into Database
+        run: |
+          PGPASSWORD=postgres psql -h 127.0.0.1 -U postgres -d flight_booker_db << EOF
+          INSERT INTO "Airports" ("AirportCode") VALUES ('AAA');
+          INSERT INTO "Airports" ("AirportCode") VALUES ('AAB');
+          EOF
+
       - name: Start Backend
         run: dotnet run&
         working-directory: ./backend
