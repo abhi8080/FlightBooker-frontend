@@ -46,9 +46,11 @@ jobs:
 
       - name: Restore dependencies
         run: dotnet restore
+        working-directory: ./backend
 
       - name: Build
         run: dotnet build --configuration Release
+        working-directory: ./backend
 
       - name: Migrate tables to database
         run: dotnet ef database update
