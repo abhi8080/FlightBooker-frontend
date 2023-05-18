@@ -71,9 +71,11 @@ jobs:
 
       - name: Install Playwright Dependencies
         run: npx playwright install
+        working-directory: ./frontend
 
       - name: Install Playwright Browsers
         run: npx playwright install-deps
+        working-directory: ./frontend
 
       - name: Run Playwright tests
         run: npx playwright test
