@@ -53,7 +53,7 @@ jobs:
         working-directory: ./backend
 
       - name: Migrate tables to database
-        run: dotnet ef database update
+        run: dotnet new tool-manifest && dotnet tool install dotnet-ef && dotnet ef database update
         working-directory: ./backend
 
       - name: Start Backend
