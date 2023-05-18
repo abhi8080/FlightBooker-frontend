@@ -61,6 +61,7 @@ jobs:
           PGPASSWORD=postgres psql -h 127.0.0.1 -U postgres -d flight_booker_db << EOF
           INSERT INTO "Airports" ("AirportCode") VALUES ('AAA');
           INSERT INTO "Airports" ("AirportCode") VALUES ('AAB');
+          INSERT INTO "Flights" ("DepartureAirportId", "ArrivalAirportId", "StartDateTime", "FlightDuration") VALUES (1, 2, '2023-04-13 08:00:00+02', '02:00:00');
           EOF
 
       - name: Start Backend
