@@ -11,13 +11,14 @@
       </h6>
       <p class="card-text">
         <small class="text-muted">
-          Flight time: {{ flight.flightDuration }} hours
+          {{ $t("flightTime") }}: {{ flight.flightDuration }}
+          {{ $t("hours") }}
         </small>
       </p>
     </div>
     <div class="card-footer">
       <button v-on:click="bookFlight" type="button" class="btn btn-primary">
-        Book Flight
+        {{ $t("bookFlight") }}
       </button>
     </div>
   </div>

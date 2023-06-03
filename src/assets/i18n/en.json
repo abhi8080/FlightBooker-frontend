@@ -1,0 +1,19 @@
+{
+  "searchFlights": "Search for Flights",
+  "departureAirport": "Departure Airport",
+  "arrivalAirport": "Arrival Airport",
+  "noOfPassengers": "Number Of Passengers",
+  "date": "Date",
+  "search": "Search",
+  "lang.eng": "English",
+  "lang.se": "Swedish",
+  "flightTime": "Flight Time",
+  "hours": "hours",
+  "bookFlight": "Book Flight",
+  "flightId": "Flight ID",
+  "flightRoute": "Flight Route",
+  "dateAndTime": "Date and time",
+  "passenger": "Passenger",
+  "name": "Name",
+  "book": "Book"
+}

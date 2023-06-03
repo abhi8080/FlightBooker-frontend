@@ -3,7 +3,9 @@
     <div class="card bg-dark w-50 p-3">
       <fieldset>
         <div class="form-group">
-          <label for="flightId" class="form-label mt-4">Flight ID</label>
+          <label for="flightId" class="form-label mt-4">{{
+            $t("flightId")
+          }}</label>
           <input
             type="number"
             class="form-control"
@@ -13,7 +15,9 @@
           />
         </div>
         <div class="form-group">
-          <label for="flightRoute" class="form-label mt-4">Flight Route</label>
+          <label for="flightRoute" class="form-label mt-4">{{
+            $t("flightRoute")
+          }}</label>
           <template v-if="flight.departureAirport">
             <input
               type="text"
@@ -25,7 +29,9 @@
           </template>
         </div>
         <div class="form-group">
-          <label for="chosenDate" class="form-label mt-4">Date and time</label>
+          <label for="chosenDate" class="form-label mt-4">{{
+            $t("dateAndTime")
+          }}</label>
           <input
             type="text"
             class="form-control"
@@ -44,12 +50,14 @@
         <div v-for="(, index) in passengerNames" :key="index">
           <div class="card">
             <div class="card-header">
-              <h2 class="text-center">Passenger {{ index + 1 }}</h2>
+              <h2 class="text-center">{{ $t("passenger") }} {{ index + 1 }}</h2>
             </div>
             <div class="card-body">
               <form>
                 <div class="form-group">
-                  <label for="name" class="form-label mt-4">Name</label>
+                  <label for="name" class="form-label mt-4">{{
+                    $t("name")
+                  }}</label>
                   <input
                     type="text"
                     class="form-control"
@@ -78,7 +86,9 @@
       <div class="alert alert-success" v-if="successMessage">
         <strong>{{ successMessage }}</strong>
       </div>
-      <button @click="bookConfirm" class="btn btn-primary">Book</button>
+      <button @click="bookConfirm" class="btn btn-primary">
+        {{ $t("book") }}
+      </button>
     </div>
   </div>
 </template>

@@ -1,11 +1,23 @@
 <template>
   <div class="container my-5">
-    <h1 class="text-center mb-5">Search for Flights</h1>
+    <div class="form-group">
+      <select
+        class="btn btn-primary custom-select"
+        id="lang"
+        v-model="lang"
+        @change="handleChange($event)"
+      >
+        <option value="en">{{ $t("lang.eng") }}</option>
+        <option value="se">{{ $t("lang.se") }}</option>
+      </select>
+    </div>
+
+    <h1 class="text-center mb-5">{{ $t("searchFlights") }}</h1>
     <form @submit.prevent="search" class="row g-3">
       <div class="col-md-6">
-        <label for="departureAirport" class="form-label fw-bold"
-          >Departure Airport</label
-        >
+        <label for="departureAirport" class="form-label fw-bold">{{
+          $t("departureAirport")
+        }}</label>
         <select
           id="departureAirport"
           v-model="selectedDepAirport"
@@ -18,9 +30,9 @@
         </select>
       </div>
       <div class="col-md-6">
-        <label for="arrivalAirport" class="form-label fw-bold"
-          >Arrival Airport</label
-        >
+        <label for="arrivalAirport" class="form-label fw-bold">{{
+          $t("arrivalAirport")
+        }}</label>
         <select
           id="arrivalAirport"
           v-model="selectedArrivAirport"
@@ -33,9 +45,9 @@
         </select>
       </div>
       <div class="col-md-6">
-        <label for="numOfPassengers" class="form-label fw-bold"
-          >Number of Passengers</label
-        >
+        <label for="numOfPassengers" class="form-label fw-bold">{{
+          $t("noOfPassengers")
+        }}</label>
         <select
           id="numOfPassengers"
           v-model="numOfPassengers"
@@ -49,7 +61,9 @@
         </select>
       </div>
       <div class="col-md-6">
-        <label for="selectedDate" class="form-label fw-bold">Date</label>
+        <label for="selectedDate" class="form-label fw-bold">{{
+          $t("date")
+        }}</label>
         <select
           id="selectedDate"
           v-model="selectedDate"
@@ -62,7 +76,9 @@
         </select>
       </div>
       <div class="col-12">
-        <button type="submit" class="btn btn-primary">Search</button>
+        <button type="submit" class="btn btn-primary">
+          {{ $t("search") }}
+        </button>
       </div>
     </form>
     <div class="row mt-5">
@@ -87,6 +103,7 @@ export default {
     FlightBox,
   },
   data() {
+    const lang = localStorage.getItem("lang") || "en";
     return {
       selectedDepAirport: "",
       selectedArrivAirport: "",
@@ -95,6 +112,7 @@ export default {
       airports: [],
       flightDates: [],
       flights: [],
+      lang: lang,
     };
   },
   mounted() {
@@ -136,6 +154,10 @@ export default {
         .catch((error) => {
           console.log(error);
         });
+    },
+    handleChange(event) {
+      localStorage.setItem("lang", event.target.value);
+      window.location.reload();
     },
   },
 };

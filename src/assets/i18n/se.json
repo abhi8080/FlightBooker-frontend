@@ -1,0 +1,19 @@
+{
+  "searchFlights": "Sök efter flyg",
+  "departureAirport": "Avgångsflygplats",
+  "arrivalAirport": "Ankomstflygplats  ",
+  "noOfPassengers": "Antal passagerare",
+  "date": "Datum",
+  "search": "Sök",
+  "lang.eng": "Engelska",
+  "lang.se": "Svenska",
+  "flightTime": "Flygtid",
+  "hours": "timmar",
+  "bookFlight": "Boka flyg",
+  "flightId": "Flyg ID",
+  "flightRoute": "Flygfärdväg",
+  "dateAndTime": "Datum och tid",
+  "passenger": "Passagerare",
+  "name": "Namn",
+  "book": "Boka"
+}
