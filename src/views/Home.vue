@@ -121,6 +121,9 @@ export default {
   },
 
   methods: {
+    /**
+     * Gets all airports from the API and stores them in the airports array.
+     */
     async getAirports() {
       await axios
         .get("/airports")
@@ -132,6 +135,9 @@ export default {
         });
     },
 
+    /**
+     * Gets all flight dates from the API and stores them in the flightDates array.
+     */
     async getFlightDates() {
       await axios
         .get("/flights/dates")
@@ -142,6 +148,9 @@ export default {
           console.log(error);
         });
     },
+    /**
+     * Searches for flights and stores them in the flights array.
+     */
     async search() {
       this.$store.commit("setNumOfPassengers", this.numOfPassengers);
       await axios
@@ -155,6 +164,10 @@ export default {
           console.log(error);
         });
     },
+    /**
+     * Sets the language in local storage and reloads the page.
+     * @param {*} event The event
+     */
     handleChange(event) {
       localStorage.setItem("lang", event.target.value);
       window.location.reload();

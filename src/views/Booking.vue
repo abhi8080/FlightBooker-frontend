@@ -122,6 +122,9 @@ export default {
     }
   },
   methods: {
+    /**
+     * Confirms the booking.
+     */
     async bookConfirm() {
       if (
         !(this.passengerNames.includes("") || this.passengerEmails.includes(""))

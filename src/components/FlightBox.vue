@@ -31,6 +31,9 @@ export default {
     flight: Object,
   },
   methods: {
+    /**
+     * Stores the flight info in the store and navigates to the book page.
+     */
     bookFlight() {
       this.$store.commit("setFlightInfo", this.flight);
       this.$router.push("/book");
