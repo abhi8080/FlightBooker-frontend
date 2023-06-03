@@ -1,7 +1,27 @@
-# Vue 3 + Vite
+# FlightBooker-frontend
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project contains the frontend code for the Flight Booker Application. It is built using Vue 3 + Vite.
 
-## Recommended IDE Setup
+Website: https://flightbooker-f5711.web.app/
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## Prerequisites
+
+Node and npm must be installed on the local system.
+
+## Install dependencies
+
+Run `npm install` to install the dependencies.
+
+## Development server
+
+Run `npm run dev` for a dev server. Navigate to `http://localhost:5173/`. The application will automatically reload if you change any of the source files.
+
+## Testing
+
+The app is tested using Playwright for acceptance tests. The tests are performed with an actual backend and database instance in the CI pipeline.
+
+Run the tests using `npx playwright test`.
+
+## Internationalization and localization
+
+The user interface and content can be displayed in different languages based on the user's preference or the selected language.
