@@ -25,3 +25,7 @@ Run the tests using `npx playwright test`.
 ## Internationalization and localization
 
 The user interface and content can be displayed in different languages based on the user's preference or the selected language.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
